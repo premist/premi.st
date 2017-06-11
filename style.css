@@ -41,7 +41,7 @@ p {
   max-width: 600px;
 }
 
-.ko p, .ko li {
+.ko p, .ko li, span.ko, b.ko {
   font-size: 18px;
   line-height: 1.4em;
 }
@@ -57,6 +57,10 @@ a:hover {
 
 code {
   font-family: Menlo, Monaco, monospace;
+}
+
+li {
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 820px) {
