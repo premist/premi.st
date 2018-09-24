@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "premi.st"
+theme = "premi.st"
+
+DefaultContentLanguage = "en"
+
+[params]
+  author = "Minku Lee"
+
+[languages]
+  [languages.en.params]
+    hero1 = "I design,"
+    hero2 = "develop,"
+    hero3 = "and operate things."
+  [languages.ko.params]
+    hero1 = "디자인하고,"
+    hero2 = "개발하고,"
+    hero3 = "운영하고 있습니다."

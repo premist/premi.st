@@ -1,0 +1,25 @@
+{{ partial "begin.html" . }}
+
+<header>
+  <h1>{{ .Site.Title }}</h1>
+  <p>{{ .Site.Params.author }}</p>
+</header>
+
+<section id="hero">
+<h2>
+  <span>{{ .Site.Params.hero1 }}</span><br>
+  <span>{{ .Site.Params.hero2 }}</span><br>
+  <span>{{ .Site.Params.hero3 }}</span>
+</h2>
+</section>
+
+<section id="content-wrap">
+  <div class="hello"><h2>hello.</h2></div>
+  <div class="content">{{ .Content }}</div>
+</section>
+
+<section id="explore">
+  <h2>explore</h2>
+</section>
+
+{{ partial "end.html" . }}

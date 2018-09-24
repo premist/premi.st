@@ -1,0 +1,136 @@
+@import "./normalize";
+
+$body_width: 1300px;
+$body_padding: 30px 0;
+
+$body_font_size: 20px;
+
+$hero_font_size: 90px;
+
+$heading_color: #111;
+$content_color: #444;
+$highlight_color: #ff8a65;
+
+* { box-sizing: border-box; }
+
+body {
+  width: 100%;
+  // font-family: -apple-system;
+  // font-family: "Ringside Narrow SSm A", "Ringside Narrow SSm B";
+  // font-family: "Whitney SSm A", "Whitney SSm B";
+  // font-family: "Sentinel SSm A", "Sentinel SSm B";
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-size: $body_font_size;
+  line-height: 1.5em;
+  color: $content_color;
+}
+
+a {
+  color: $highlight_color;
+  text-decoration: none;
+  border-bottom: 1px solid $highlight_color;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+%container {
+  position: relative;
+  width: $body_width;
+  padding: $body_padding;
+  margin: 0px auto;
+}
+
+@mixin bottom-stripes($height, $left, $bottom) {
+    &:after {
+      position: absolute;
+      display: block;
+      width: 110%;
+      height: $height;
+      left: $left;
+      bottom: $bottom;
+      z-index: -1;
+
+      background-color: $highlight_color;
+      content: "\00a0";
+    }
+}
+
+h2 {
+  font-family: "Gilroy";
+  color: $heading_color;
+
+  letter-spacing: -0.02em;
+}
+
+header {
+  @extend %container;
+
+  display: flex;
+  justify-content: space-between;
+
+  h1, p {
+    font-size: $body_font_size;
+    font-family: "Gilroy";
+    font-weight: 700;
+
+    margin: 0;
+    text-transform: lowercase;
+  }
+}
+
+#hero {
+  @extend %container;
+  padding: 100px 0;
+
+  h2 {
+    font-size: $hero_font_size;
+    font-feature-settings: "liga" 1;
+    line-height: 1.8em;
+    margin: 0;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    @include bottom-stripes(20%, 20px, 25px);
+  }
+}
+
+#content-wrap {
+  @extend %container;
+  display: flex;
+
+  div { padding: 0px; }
+
+  h2, p { margin-top: 20px; }
+
+  .hello {
+    flex: 1 auto;
+
+    h2 {
+      font-size: $body_font_size * 4;
+      line-height: 1em;
+    }
+  }
+
+  .content {
+    flex: 5;
+    font-size: $body_font_size * 1.5;
+    line-height: 1.5em;
+  }
+}
+
+#explore {
+  @extend %container;
+  position: relative;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    @include bottom-stripes(40%, 6px, 0px);
+  }
+}

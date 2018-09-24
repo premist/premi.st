@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{{ .Site.Title }}</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7399694/6278592/css/fonts.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    {{ $sass := resources.Get "styles/main.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  </head>
+
+  <body>
