@@ -21,13 +21,15 @@
 <section id="explore">
   <h2>explore</h2>
   {{ $projects := where .Site.RegularPages "Section" "project" }}
-  {{ range $projects }}
-  <div class="project">
-    {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
-    <img src="{{ $img.RelPermalink }}">
-    <p>{{ .Title }}</p>
+  <div class="projects collection">
+    {{ range $projects }}
+    <div class="project collection-item">
+      {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
+      <img src="{{ $img.RelPermalink }}">
+      <p>{{ .Title }}</p>
+    </div>
+    {{ end }}
   </div>
-  {{ end }}
 </section>
 
 {{ partial "end.html" . }}
