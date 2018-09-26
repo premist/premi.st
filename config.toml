@@ -5,6 +5,10 @@ theme = "premi.st"
 
 DefaultContentLanguage = "en"
 
+[permalinks]
+  project = "/projects/:title/"
+  talk = "/talks/:title/"
+
 [params]
   author = "Minku Lee"
 
