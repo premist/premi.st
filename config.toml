@@ -8,6 +8,14 @@ DefaultContentLanguage = "en"
 [params]
   author = "Minku Lee"
 
+  # mastodon_handle = "premist"
+  # mastodon_instance = "noon.social"
+  twitter = "premist"
+  instagram = "premist"
+  facebook = "premist.lee"
+  keybase = "premist"
+  github = "premist"
+
 [languages]
   [languages.en.params]
     hero1 = "I design,"
