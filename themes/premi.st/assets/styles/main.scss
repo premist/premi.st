@@ -130,6 +130,35 @@ header {
   }
 }
 
+#connect {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    justify-content: space-between;
+  }
+
+  li {
+    font-size: 1.2em;
+    margin-right: 30px;
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+  span {
+    display: inline-block;
+  }
+}
+
 .collection {
   @extend %container;
   position: relative;

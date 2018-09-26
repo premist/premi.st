@@ -18,6 +18,8 @@
   <div class="content">{{ .Content }}</div>
 </section>
 
+{{- partial "connect.html" . -}}
+
 <section id="explore" class="collection">
   <h2>explore</h2>
   {{ $projects := where .Site.RegularPages "Section" "project" }}
