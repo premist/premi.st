@@ -1,7 +1,8 @@
 ---
 title: 35
-launchDate: 2018-08-26
-description: "Time, captured in pixels"
+date: 2018-08-26
+tagline: "Time, captured in pixels"
+weight: 1
 ---
 
 Hi

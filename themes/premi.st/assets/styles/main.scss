@@ -130,7 +130,7 @@ header {
   }
 }
 
-#explore {
+.collection {
   @extend %container;
   position: relative;
 
@@ -139,16 +139,33 @@ header {
     display: inline-block;
     @include bottom-stripes(40%, 6px, 0px);
   }
-}
 
-.collection {
-  .collection-item {
+  .collection-scroller {
+    display: block;
     position: relative;
-    width: 33%;
-    float: left;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 
-    img {
-      width: 100%;
+    .collection-items {
+      white-space: nowrap;
+    }
+
+    .collection-item {
+      position: relative;
+      display: inline-block;
+      // height: 100px;
+      margin-right: 20px;
+
+      h3, p {
+        font-weight: 400;
+        margin: 0;
+      }
+
+      img {
+        height: 250px;
+      }
     }
   }
 }
+

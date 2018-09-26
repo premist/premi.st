@@ -1746,7 +1746,7 @@ a {
 p {
   margin-bottom: 1.5em; }
 
-header, #hero, #content-wrap, #explore {
+header, #hero, #content-wrap, .collection {
   position: relative;
   width: 1300px;
   padding: 30px 0;
@@ -1804,12 +1804,12 @@ header {
     font-size: 30px;
     line-height: 1.5em; }
 
-#explore {
+.collection {
   position: relative; }
-  #explore h2 {
+  .collection h2 {
     position: relative;
     display: inline-block; }
-    #explore h2:after {
+    .collection h2:after {
       position: absolute;
       display: block;
       width: 110%;
@@ -1819,10 +1819,20 @@ header {
       z-index: -1;
       background-color: #ff8a65;
       content: "\00a0"; }
-
-.collection .collection-item {
-  position: relative;
-  width: 33%;
-  float: left; }
-  .collection .collection-item img {
-    width: 100%; }
+  .collection .collection-scroller {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; }
+    .collection .collection-scroller .collection-items {
+      white-space: nowrap; }
+    .collection .collection-scroller .collection-item {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px; }
+      .collection .collection-scroller .collection-item h3, .collection .collection-scroller .collection-item p {
+        font-weight: 400;
+        margin: 0; }
+      .collection .collection-scroller .collection-item img {
+        height: 250px; }

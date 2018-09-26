@@ -1,7 +1,8 @@
 ---
 title: mirror.premi.st
-launchDate: 2018-08-26
-description: "Linux distro mirror"
+date: 2013-11-01
+tagline: "Linux distro mirror"
+weight: 20
 ---
 
 Hi
