@@ -36,6 +36,10 @@ a {
   color: $highlight_color;
   text-decoration: none;
   border-bottom: 1px solid $highlight_color;
+
+  &:hover {
+    color: darken($highlight_color, 20%);
+  }
 }
 
 p {
@@ -47,6 +51,12 @@ p {
   width: $body_width;
   padding: $body_padding;
   margin: 0px auto;
+}
+
+%no-link-border {
+  a {
+    border-bottom: none;
+  }
 }
 
 @mixin bottom-stripes($height, $left, $bottom) {
@@ -63,7 +73,6 @@ p {
       content: "\00a0";
     }
 }
-
 h2 {
   font-family: "Gilroy";
   color: $heading_color;
@@ -131,6 +140,8 @@ header {
 }
 
 #connect {
+  @extend %no-link-border;
+
   ul {
     display: flex;
     list-style: none;
@@ -142,10 +153,6 @@ header {
   li {
     font-size: 1.2em;
     margin-right: 30px;
-  }
-
-  a {
-    border-bottom: none;
   }
 
   img {
@@ -181,9 +188,10 @@ header {
     }
 
     .collection-item {
+      @extend %no-link-border;
+
       position: relative;
       display: inline-block;
-      // height: 100px;
       margin-right: 20px;
 
       h3, p {

@@ -1742,6 +1742,8 @@ a {
   color: #ff8a65;
   text-decoration: none;
   border-bottom: 1px solid #ff8a65; }
+  a:hover {
+    color: #fe3d00; }
 
 p {
   margin-bottom: 1.5em; }
@@ -1751,6 +1753,9 @@ header, #hero, #content-wrap, .collection {
   width: 1300px;
   padding: 30px 0;
   margin: 0px auto; }
+
+#connect a, .collection .collection-scroller .collection-item a {
+  border-bottom: none; }
 
 h2 {
   font-family: "Gilroy";
@@ -1813,9 +1818,6 @@ header {
 #connect li {
   font-size: 1.2em;
   margin-right: 30px; }
-
-#connect a {
-  border-bottom: none; }
 
 #connect img {
   display: inline-block;
