@@ -1739,7 +1739,7 @@ header, footer, .container, #hero, .content-wrap {
   max-width: 1300px;
   padding: 40px;
   margin: 0px auto; }
-  @media only screen and (max-width: 700px) {
+  @media (max-width: 750px) {
     header, footer, .container, #hero, .content-wrap {
       padding: 20px; } }
 
@@ -1753,28 +1753,28 @@ footer a, #connect a, #contact a, .collection .collection-scroller .collection-i
 
 #hero h2, .content-wrap .title h2 {
   font-size: 90px; }
-  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+  @media (min-width: 751px) and (max-width: 1100px) {
     #hero h2, .content-wrap .title h2 {
-      font-size: 81px; } }
-  @media only screen and (max-width: 700px) {
+      font-size: 72px; } }
+  @media (max-width: 750px) {
     #hero h2, .content-wrap .title h2 {
       font-size: 54px; } }
 
 body, header h1, header p, footer p {
   font-size: 20px; }
-  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+  @media (min-width: 751px) and (max-width: 1100px) {
     body, header h1, header p, footer p {
       font-size: 20px; } }
-  @media only screen and (max-width: 700px) {
+  @media (max-width: 750px) {
     body, header h1, header p, footer p {
       font-size: 18px; } }
 
 .content-wrap .content {
   font-size: 30px; }
-  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+  @media (min-width: 751px) and (max-width: 1100px) {
     .content-wrap .content {
       font-size: 24px; } }
-  @media only screen and (max-width: 700px) {
+  @media (max-width: 750px) {
     .content-wrap .content {
       font-size: 21px; } }
 
@@ -1843,74 +1843,85 @@ section {
 #hero {
   padding-top: 100px;
   padding-bottom: 100px; }
-  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+  @media (min-width: 751px) and (max-width: 1100px) {
     #hero {
       padding-top: 70px;
-      padding-bottom: 70px; } }
-  @media only screen and (max-width: 700px) {
+      padding-bottom: 70px; }
+      #hero br.mobilebreak {
+        display: none; } }
+  @media (max-width: 750px) {
     #hero {
       padding-top: 50px;
-      padding-bottom: 50px; } }
+      padding-bottom: 50px; }
+      #hero br.mobilebreak {
+        display: none; } }
   #hero h2 {
     margin: 0;
     line-height: 1.8em; }
   #hero span {
     position: relative;
     display: inline-block; }
-    #hero span:after {
-      position: absolute;
-      display: block;
-      width: 110%;
-      height: 20%;
-      left: 20px;
-      bottom: 25px;
-      z-index: -1;
-      background-color: #ff8a65;
-      content: "\00a0"; }
-      @media only screen and (min-width: 701px) and (max-width: 1100px) {
-        #hero span:after {
-          width: 106%; } }
-      @media only screen and (max-width: 700px) {
-        #hero span:after {
-          width: 103%; } }
-    @media only screen and (min-width: 701px) and (max-width: 1100px) {
-      #hero span:after {
-        position: absolute;
-        display: block;
-        width: 110%;
-        height: 20%;
-        left: 16px;
-        bottom: 25px;
-        z-index: -1;
-        background-color: #ff8a65;
-        content: "\00a0"; } }
-  @media only screen and (min-width: 701px) and (max-width: 1100px) and (min-width: 701px) and (max-width: 1100px) {
-    #hero span:after {
-      width: 106%; } }
-  @media only screen and (min-width: 701px) and (max-width: 1100px) and (max-width: 700px) {
-    #hero span:after {
-      width: 103%; } }
-    @media only screen and (max-width: 700px) {
-      #hero span:after {
-        position: absolute;
-        display: block;
-        width: 110%;
-        height: 20%;
-        left: 8px;
-        bottom: 15px;
-        z-index: -1;
-        background-color: #ff8a65;
-        content: "\00a0"; } }
-  @media only screen and (max-width: 700px) and (min-width: 701px) and (max-width: 1100px) {
-    #hero span:after {
-      width: 106%; } }
-  @media only screen and (max-width: 700px) and (max-width: 700px) {
-    #hero span:after {
-      width: 103%; } }
+    @media (min-width: 1101px) {
+      #hero span.r3 {
+        display: table; }
+        #hero span.r3:after {
+          position: absolute;
+          display: block;
+          width: 110%;
+          height: 20%;
+          left: 20px;
+          bottom: 25px;
+          z-index: -1;
+          background-color: #ff8a65;
+          content: "\00a0"; } }
+    @media (min-width: 1101px) and (min-width: 751px) and (max-width: 1100px) {
+      #hero span.r3:after {
+        width: 106%; } }
+    @media (min-width: 1101px) and (max-width: 750px) {
+      #hero span.r3:after {
+        width: 106%; } }
+    @media (min-width: 751px) and (max-width: 1100px) {
+      #hero span.r3 {
+        display: table; }
+        #hero span.r3:after {
+          position: absolute;
+          display: block;
+          width: 110%;
+          height: 20%;
+          left: 16px;
+          bottom: 25px;
+          z-index: -1;
+          background-color: #ff8a65;
+          content: "\00a0"; } }
+    @media (min-width: 751px) and (max-width: 1100px) and (min-width: 751px) and (max-width: 1100px) {
+      #hero span.r3:after {
+        width: 106%; } }
+    @media (min-width: 751px) and (max-width: 1100px) and (max-width: 750px) {
+      #hero span.r3:after {
+        width: 106%; } }
+    @media (max-width: 750px) {
+      #hero span.r4 {
+        display: table; }
+        #hero span.r4:after {
+          position: absolute;
+          display: block;
+          width: 110%;
+          height: 20%;
+          left: 8px;
+          bottom: 15px;
+          z-index: -1;
+          background-color: #ff8a65;
+          content: "\00a0"; } }
+    @media (max-width: 750px) and (min-width: 751px) and (max-width: 1100px) {
+      #hero span.r4:after {
+        width: 106%; } }
+    @media (max-width: 750px) and (max-width: 750px) {
+      #hero span.r4:after {
+        width: 106%; } }
 
 .content-wrap {
   display: flex; }
-  @media only screen and (max-width: 700px) {
+  @media (max-width: 750px) {
     .content-wrap {
       display: block; } }
   .content-wrap h2, .content-wrap p {
@@ -1928,7 +1939,7 @@ section {
     flex: 8;
     padding-left: 40px;
     line-height: 1.5em; }
-    @media only screen and (max-width: 700px) {
+    @media (max-width: 750px) {
       .content-wrap .content {
         padding-left: 0; }
         .content-wrap .content br {
@@ -1942,7 +1953,7 @@ section {
     padding-top: 0;
     padding-bottom: 0;
     justify-content: space-between; }
-    @media only screen and (max-width: 700px) {
+    @media (max-width: 750px) {
       #connect ul {
         display: block; } }
   #connect span {
@@ -1964,12 +1975,12 @@ section {
       z-index: -1;
       background-color: #ff8a65;
       content: "\00a0"; }
-      @media only screen and (min-width: 701px) and (max-width: 1100px) {
+      @media (min-width: 751px) and (max-width: 1100px) {
         .collection h2:after {
           width: 106%; } }
-      @media only screen and (max-width: 700px) {
+      @media (max-width: 750px) {
         .collection h2:after {
-          width: 103%; } }
+          width: 106%; } }
   .collection .collection-scroller {
     display: block;
     position: relative;
@@ -1991,6 +2002,6 @@ section {
         margin: 0; }
       .collection .collection-scroller .collection-item img {
         height: 250px; }
-        @media only screen and (max-width: 700px) {
+        @media (max-width: 750px) {
           .collection .collection-scroller .collection-item img {
             height: 175px; } }

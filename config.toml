@@ -22,10 +22,22 @@ DefaultContentLanguage = "en"
   keybase = "premist"
   github = "premist"
 
+  hero = '''
+  <span class="r3 r4">I design,</span>
+  <span class="r3 r4">develop,</span>
+  <span class="r3">
+    <span class="r4">and operate&nbsp;</span>
+    <span class="r4">things.</span>
+  </span>
+  '''
+
+  # hero = "<span>{{ .Site.Params.hero1 }}</span><br>
+  # <span>{{ .Site.Params.hero2 }}</span><br>
+  # <span>{{ .Site.Params.hero3 }}</span>"
+
   hero1 = "I design,"
   hero2 = "develop,"
-  hero3_1 = "and operate"
-  hero3_2 = "things."
+  hero3 = "and <br>operate <br>things."
 
 
 [languages]

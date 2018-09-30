@@ -2,10 +2,7 @@
 
 <section id="hero">
 <h2>
-  <span>{{ .Site.Params.hero1 }}</span><br>
-  <span>{{ .Site.Params.hero2 }}</span><br>
-  <span class="mobilebreak">{{ .Site.Params.hero3_1 }}</span>
-  <span>{{ .Site.Params.hero3_2 }}</span>
+  {{ .Site.Params.hero | safeHTML }}
 </h2>
 </section>
 
