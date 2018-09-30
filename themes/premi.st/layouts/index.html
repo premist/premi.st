@@ -27,7 +27,13 @@
       <div class="project collection-item">
         {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
         <img src="{{ $img.RelPermalink }}">
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <h3>
+          {{ if (isset .Params "website") }}
+          <a href="{{ .Params.website }}" target="_blank">{{ .Title }}</a>
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h3>
         <p>{{ .Params.tagline }}</p>
       </div>
       {{ end }}
@@ -47,7 +53,13 @@
       <div class="talk collection-item">
         {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
         <img src="{{ $img.RelPermalink }}">
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <h3>
+          {{ if (isset .Params "speakerdeck") }}
+            <a href="{{ .Params.speakerdeck }}" target="_blank">{{ .Title }}</a>
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h3>
         <p>{{ .Params.tagline }}</p>
       </div>
       {{ end }}
