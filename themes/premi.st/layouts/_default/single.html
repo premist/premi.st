@@ -1,0 +1,22 @@
+
+{{ define "main" }}
+
+<section id="hero">
+<h2>
+  <span>{{ .Title }}</span>
+</h2>
+</section>
+
+<section class="content-wrap">
+  <!-- <div class="title">
+    {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
+    <img src="{{ $img.RelPermalink }}">
+  </div> -->
+
+  <div class="content">
+    {{ with .Content }}
+      {{- . -}}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

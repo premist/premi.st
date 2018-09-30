@@ -1,0 +1,47 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "premi.st"
+theme = "premi.st"
+
+DefaultContentLanguage = "en"
+
+[permalinks]
+  project = "/projects/:title/"
+  talk = "/talks/:title/"
+
+[params]
+  author = "Minku Lee"
+  public_email = "public@premi.st"
+  pgp_public_key = "448C E46C A714 48F8 7788 E57C F530 9452 F2EF 9CEB"
+
+  # mastodon_handle = "premist"
+  # mastodon_instance = "noon.social"
+  twitter = "premist"
+  instagram = "premist"
+  facebook = "premist.lee"
+  keybase = "premist"
+  github = "premist"
+
+  hero = '''
+  <span class="r3 r4">I design,</span>
+  <span class="r3 r4">develop,</span>
+  <span class="r3">
+    <span class="r4">and operate</span>
+    <span class="r4">things.</span>
+  </span>
+  '''
+
+  # hero = "<span>{{ .Site.Params.hero1 }}</span><br>
+  # <span>{{ .Site.Params.hero2 }}</span><br>
+  # <span>{{ .Site.Params.hero3 }}</span>"
+
+  hero1 = "I design,"
+  hero2 = "develop,"
+  hero3 = "and <br>operate <br>things."
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+  [languages.ko]
+    languageName = "한국어"

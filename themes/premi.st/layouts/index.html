@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<section id="hero">
+<h2>
+  {{ .Site.Params.hero | safeHTML }}
+</h2>
+</section>
+
+<section class="content-wrap">
+  <div class="title"><h2>hello.</h2></div>
+  <div class="content">{{ .Content }}</div>
+</section>
+
+{{ partial "connect.html" . }}
+
+<section id="explore" class="collection">
+  <div class="container">
+    <h2>explore</h2>
+  </div>
+
+  {{ $projects := where .Site.RegularPages "Section" "project" }}
+  <div class="projects collection-scroller">
+    <div class="collection-items">
+      {{ range $projects }}
+      <div class="project collection-item">
+        {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
+        <img src="{{ $img.RelPermalink }}">
+        <h3>
+          {{ if (isset .Params "website") }}
+          <a href="{{ .Params.website }}" target="_blank">{{ .Title }}</a>
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h3>
+        <p>{{ .Params.tagline }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="talks" class="collection">
+  <div class="container">
+    <h2>talks</h2>
+  </div>
+
+  {{ $talks := where .Site.RegularPages "Section" "talk" }}
+  <div class="talks collection-scroller">
+    <div class="collection-items">
+      {{ range sort $talks ".Date" "desc" }}
+      <div class="talk collection-item">
+        {{ $img := (.Resources.ByType "image").GetMatch "*thumb*" }}
+        <img src="{{ $img.RelPermalink }}">
+        <h3>
+          {{ if (isset .Params "speakerdeck") }}
+            <a href="{{ .Params.speakerdeck }}" target="_blank">{{ .Title }}</a>
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h3>
+        <p>{{ .Params.tagline }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "contact.html" . }}
+
+{{ end }}

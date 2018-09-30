@@ -1,0 +1,65 @@
+<section id="connect" class="collection">
+  <div class="container">
+    <h2>connect</h2>
+  </div>
+
+  {{ template "all_social_items" . }}
+</section>
+
+{{ define "all_social_items" }}
+  <ul class="container">
+    {{ with .Site.Params.mastodon_instance }}
+      {{ $instance := . }}
+      {{ with $.Site.Params.mastodon_handle }}
+        {{ $fullHandle := printf "@%s@%s" . $instance }}
+        {{ $link := printf "https://%s/%s" $instance . }}
+        {{ $mastodon := slice "Mastodon" "mstdn.svg" $fullHandle $link }}
+        {{ template "social_item" $mastodon }}
+      {{ end }}
+    {{ end }}
+
+    {{ with .Site.Params.twitter }}
+      {{ $link := printf "https://twitter.com/%s" . }}
+      {{ $twitter := slice "Twitter" "twt.svg" . $link }}
+      {{ template "social_item" $twitter }}
+    {{ end }}
+
+    {{ with .Site.Params.facebook }}
+      {{ $link := printf "https://fb.me/%s" . }}
+      {{ $facebook := slice "Facebook" "fb.svg" . $link }}
+      {{ template "social_item" $facebook }}
+    {{ end }}
+
+    {{ with .Site.Params.instagram }}
+      {{ $link := printf "https://instagram.com/%s" . }}
+      {{ $instagram := slice "Instagram" "ig.svg" . $link }}
+      {{ template "social_item" $instagram }}
+    {{ end }}
+
+    {{ with .Site.Params.keybase }}
+      {{ $link := printf "https://keybase.io/%s" . }}
+      {{ $keybase := slice "Keybase" "kb.svg" . $link }}
+      {{ template "social_item" $keybase }}
+    {{ end }}
+
+    {{ with .Site.Params.github }}
+      {{ $link := printf "https://gtihub.com/%s" . }}
+      {{ $github := slice "GitHub" "gh.svg" . $link }}
+      {{ template "social_item" $github }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{/*
+  Accepts array with the following elements:
+  [Service name] [Icon filename] [Full handle to display] [Web link]
+*/}}
+{{ define "social_item" }}
+  <li>
+    {{ $iconPath := printf "service-icons/%s" (index . 1) }}
+    {{ $icon := resources.Get $iconPath | resources.Minify }}
+    <img class="icon" src="{{ $icon.RelPermalink }}">
+    {{/* <span>{{ index . 0 }}</span> */}}
+    <a href="{{ index . 3 }}" target="_blank">{{ (index . 2) }}</a>
+  </li>
+{{ end }}
