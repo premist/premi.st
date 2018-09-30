@@ -11,6 +11,8 @@ DefaultContentLanguage = "en"
 
 [params]
   author = "Minku Lee"
+  public_email = "public@premi.st"
+  pgp_public_key = "448C E46C A714 48F8 7788 E57C F530 9452 F2EF 9CEB"
 
   # mastodon_handle = "premist"
   # mastodon_instance = "noon.social"
@@ -20,12 +22,11 @@ DefaultContentLanguage = "en"
   keybase = "premist"
   github = "premist"
 
+  hero1 = "I design,"
+  hero2 = "develop,"
+  hero3 = "and operate things."
+
+
 [languages]
   [languages.en.params]
-    hero1 = "I design,"
-    hero2 = "develop,"
-    hero3 = "and operate things."
   [languages.ko.params]
-    hero1 = "디자인하고,"
-    hero2 = "개발하고,"
-    hero3 = "운영하고 있습니다."
