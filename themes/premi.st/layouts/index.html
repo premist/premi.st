@@ -1,9 +1,4 @@
-{{ partial "begin.html" . }}
-
-<header>
-  <h1>{{ .Site.Title }}</h1>
-  <p>{{ .Site.Params.author }}</p>
-</header>
+{{ define "main" }}
 
 <section id="hero">
 <h2>
@@ -13,15 +8,18 @@
 </h2>
 </section>
 
-<section id="content-wrap">
-  <div class="hello"><h2>hello.</h2></div>
+<section class="content-wrap">
+  <div class="title"><h2>hello.</h2></div>
   <div class="content">{{ .Content }}</div>
 </section>
 
-{{- partial "connect.html" . -}}
+{{ partial "connect.html" . }}
 
 <section id="explore" class="collection">
-  <h2>explore</h2>
+  <div class="container">
+    <h2>explore</h2>
+  </div>
+
   {{ $projects := where .Site.RegularPages "Section" "project" }}
   <div class="projects collection-scroller">
     <div class="collection-items">
@@ -38,7 +36,10 @@
 </section>
 
 <section id="talks" class="collection">
-  <h2>talks</h2>
+  <div class="container">
+    <h2>talks</h2>
+  </div>
+
   {{ $talks := where .Site.RegularPages "Section" "talk" }}
   <div class="talks collection-scroller">
     <div class="collection-items">
@@ -54,4 +55,6 @@
   </div>
 </section>
 
-{{ partial "end.html" . }}
+{{ partial "contact.html" . }}
+
+{{ end }}

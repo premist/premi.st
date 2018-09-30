@@ -1,17 +1,10 @@
 @import "./normalize";
 
+@import "./fonts/gilroy";
 @import "./fonts/ibm-plex/ibm-plex";
 
-@font-face {
-    font-family: "Gilroy";
-    src: url("https://cdn.si.mpli.st/webfonts/gilroy/extrabold.woff2") format("woff2"),
-         url("https://cdn.si.mpli.st/webfonts/gilroy/extrabold.woff") format("woff");
-    font-weight: 900;
-    font-style: normal
-}
-
 $body_width: 1300px;
-$body_padding: 30px 0;
+$body_padding: 20px 0;
 
 $body_font_size: 20px;
 
@@ -21,30 +14,9 @@ $heading_color: #111;
 $content_color: #444;
 $highlight_color: #ff8a65;
 
-* { box-sizing: border-box; }
-
-body {
-  width: 100%;
-  font-family: "IBM Plex Sans";
-  font-weight: 400;
-  font-size: $body_font_size;
-  line-height: 1.5em;
-  color: $content_color;
-}
-
-a {
-  color: $highlight_color;
-  text-decoration: none;
-  border-bottom: 1px solid $highlight_color;
-
-  &:hover {
-    color: darken($highlight_color, 20%);
-  }
-}
-
-p {
-  margin-bottom: 1.5em;
-}
+$font_display: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font_text: "IBM Plex Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font_mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 %container {
   position: relative;
@@ -57,6 +29,13 @@ p {
   a {
     border-bottom: none;
   }
+}
+
+%list-item {
+  margin: 10px 30px 10px 0;
+
+  font-family: $font_display;
+  font-size: 1.2em;
 }
 
 @mixin bottom-stripes($height, $left, $bottom) {
@@ -73,11 +52,45 @@ p {
       content: "\00a0";
     }
 }
-h2 {
-  font-family: "Gilroy";
-  color: $heading_color;
 
-  letter-spacing: -0.02em;
+* { box-sizing: border-box; }
+
+body {
+  width: 100%;
+  font-family: $font_text;
+  font-weight: 400;
+  font-size: $body_font_size;
+  line-height: 1.5em;
+  color: $content_color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font_display;
+  font-feature-settings: "liga" 1;
+
+  letter-spacing: 0em;
+}
+
+h2 {
+  color: $heading_color;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+pre {
+  font-family: $font_mono;
+}
+
+a {
+  color: $highlight_color;
+  text-decoration: none;
+  border-bottom: 1px solid $highlight_color;
+
+  &:hover {
+    color: darken($highlight_color, 20%);
+  }
 }
 
 header {
@@ -87,13 +100,26 @@ header {
   justify-content: space-between;
 
   h1, p {
-    font-size: $body_font_size;
-    font-family: "Gilroy";
-    font-weight: 700;
-
     margin: 0;
+
+    font-size: $body_font_size;
+    font-family: $font_display;
+    font-weight: 600;
     text-transform: lowercase;
   }
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.container  { @extend %container; }
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
 }
 
 #hero {
@@ -102,7 +128,6 @@ header {
 
   h2 {
     font-size: $hero_font_size;
-    font-feature-settings: "liga" 1;
     line-height: 1.8em;
     margin: 0;
   }
@@ -115,16 +140,23 @@ header {
   }
 }
 
-#content-wrap {
+.content-wrap {
   @extend %container;
   display: flex;
 
-  div { padding: 0px; }
-
   h2, p { margin-top: 20px; }
 
-  .hello {
-    flex: 1 auto;
+  & > div {
+    padding: 0px;
+  }
+
+  .title {
+    flex: 3;
+
+    img {
+      width: 100%;
+      margin-top: 20px;
+    }
 
     h2 {
       font-size: $body_font_size * 4;
@@ -133,7 +165,8 @@ header {
   }
 
   .content {
-    flex: 5;
+    flex: 8;
+    padding-left: 40px;
     font-size: $body_font_size * 1.5;
     line-height: 1.5em;
   }
@@ -141,6 +174,7 @@ header {
 
 #connect {
   @extend %no-link-border;
+  font-family: $font_display;
 
   ul {
     display: flex;
@@ -151,35 +185,39 @@ header {
   }
 
   li {
-    font-size: 1.2em;
-    margin-right: 30px;
+    @extend %list-item;
   }
 
-  img {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
-  }
   span {
     display: inline-block;
   }
 }
 
+#contact {
+  @extend %no-link-border;
+
+  span {
+    @extend %list-item;
+  }
+}
+
 .collection {
-  @extend %container;
   position: relative;
 
   h2 {
     position: relative;
     display: inline-block;
+    margin: 0;
+
     @include bottom-stripes(40%, 6px, 0px);
   }
 
   .collection-scroller {
     display: block;
     position: relative;
-    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: $body_width * 1.1;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
 

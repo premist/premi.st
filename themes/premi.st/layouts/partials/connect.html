@@ -1,6 +1,13 @@
 <section id="connect" class="collection">
-  <h2>connect</h2>
-  <ul>
+  <div class="container">
+    <h2>connect</h2>
+  </div>
+
+  {{ template "all_social_items" . }}
+</section>
+
+{{ define "all_social_items" }}
+  <ul class="container">
     {{ with .Site.Params.mastodon_instance }}
       {{ $instance := . }}
       {{ with $.Site.Params.mastodon_handle }}
@@ -41,7 +48,7 @@
       {{ template "social_item" $github }}
     {{ end }}
   </ul>
-</section>
+{{ end }}
 
 {{/*
   Accepts array with the following elements:
@@ -51,7 +58,7 @@
   <li>
     {{ $iconPath := printf "service-icons/%s" (index . 1) }}
     {{ $icon := resources.Get $iconPath | resources.Minify }}
-    <img src="{{ $icon.RelPermalink }}">
+    <img class="icon" src="{{ $icon.RelPermalink }}">
     {{/* <span>{{ index . 0 }}</span> */}}
     <a href="{{ index . 3 }}" target="_blank">{{ (index . 2) }}</a>
   </li>

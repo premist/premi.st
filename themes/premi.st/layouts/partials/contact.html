@@ -1,0 +1,16 @@
+<section id="contact" class="collection">
+  <div class="container">
+    <h2>contact</h2>
+  </div>
+
+  <div class="container">
+    {{ $icon := resources.Get "service-icons/mail.svg" | resources.Minify }}
+    <img class="icon" src="{{ $icon.RelPermalink }}">
+    <span>
+      <a href="mailto:{{ .Site.Params.public_email }}">
+        {{ .Site.Params.public_email }}
+      </a>
+    </span>
+    <pre>{{ .Site.Params.pgp_public_key }}</pre>
+  </div>
+</section>

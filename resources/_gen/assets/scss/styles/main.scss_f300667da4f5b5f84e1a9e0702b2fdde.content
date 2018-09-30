@@ -298,6 +298,18 @@ template {
   display: none; }
 
 @font-face {
+  font-family: "Gilroy";
+  src: url("https://cdn.si.mpli.st/webfonts/gilroy/extrabold.woff2") format("woff2"), url("https://cdn.si.mpli.st/webfonts/gilroy/extrabold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("https://cdn.si.mpli.st/webfonts/gilroy/semibold.woff2") format("woff2"), url("https://cdn.si.mpli.st/webfonts/gilroy/semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
   font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 700;
@@ -1721,22 +1733,44 @@ template {
   src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"), url("https://cdn.si.mpli.st/webfonts/ibmplex/IBM-Plex-Sans/fonts/split/woff2/IBMPlexSans-ThinItalic-Greek.woff2") format("woff2");
   unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE; }
 
-@font-face {
-  font-family: "Gilroy";
-  src: url("https://cdn.si.mpli.st/webfonts/gilroy/extrabold.woff2") format("woff2"), url("https://cdn.si.mpli.st/webfonts/gilroy/extrabold.woff") format("woff");
-  font-weight: 900;
-  font-style: normal; }
+header, .container, #hero, .content-wrap {
+  position: relative;
+  width: 1300px;
+  padding: 20px 0;
+  margin: 0px auto; }
+
+#connect a, #contact a, .collection .collection-scroller .collection-item a {
+  border-bottom: none; }
+
+#connect li, #contact span {
+  margin: 10px 30px 10px 0;
+  font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.2em; }
 
 * {
   box-sizing: border-box; }
 
 body {
   width: 100%;
-  font-family: "IBM Plex Sans";
+  font-family: "IBM Plex Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5em;
   color: #444; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-feature-settings: "liga" 1;
+  letter-spacing: 0em; }
+
+h2 {
+  color: #111; }
+
+p {
+  margin-bottom: 1.5em; }
+
+pre {
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
 
 a {
   color: #ff8a65;
@@ -1745,38 +1779,29 @@ a {
   a:hover {
     color: #fe3d00; }
 
-p {
-  margin-bottom: 1.5em; }
-
-header, #hero, #content-wrap, .collection {
-  position: relative;
-  width: 1300px;
-  padding: 30px 0;
-  margin: 0px auto; }
-
-#connect a, .collection .collection-scroller .collection-item a {
-  border-bottom: none; }
-
-h2 {
-  font-family: "Gilroy";
-  color: #111;
-  letter-spacing: -0.02em; }
-
 header {
   display: flex;
   justify-content: space-between; }
   header h1, header p {
-    font-size: 20px;
-    font-family: "Gilroy";
-    font-weight: 700;
     margin: 0;
+    font-size: 20px;
+    font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 600;
     text-transform: lowercase; }
+
+section {
+  margin-bottom: 80px; }
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px; }
 
 #hero {
   padding: 100px 0; }
   #hero h2 {
     font-size: 90px;
-    font-feature-settings: "liga" 1;
     line-height: 1.8em;
     margin: 0; }
   #hero span {
@@ -1793,46 +1818,42 @@ header {
       background-color: #ff8a65;
       content: "\00a0"; }
 
-#content-wrap {
+.content-wrap {
   display: flex; }
-  #content-wrap div {
-    padding: 0px; }
-  #content-wrap h2, #content-wrap p {
+  .content-wrap h2, .content-wrap p {
     margin-top: 20px; }
-  #content-wrap .hello {
-    flex: 1 auto; }
-    #content-wrap .hello h2 {
+  .content-wrap > div {
+    padding: 0px; }
+  .content-wrap .title {
+    flex: 3; }
+    .content-wrap .title img {
+      width: 100%;
+      margin-top: 20px; }
+    .content-wrap .title h2 {
       font-size: 80px;
       line-height: 1em; }
-  #content-wrap .content {
-    flex: 5;
+  .content-wrap .content {
+    flex: 8;
+    padding-left: 40px;
     font-size: 30px;
     line-height: 1.5em; }
 
-#connect ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  justify-content: space-between; }
-
-#connect li {
-  font-size: 1.2em;
-  margin-right: 30px; }
-
-#connect img {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 4px; }
-
-#connect span {
-  display: inline-block; }
+#connect {
+  font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  #connect ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between; }
+  #connect span {
+    display: inline-block; }
 
 .collection {
   position: relative; }
   .collection h2 {
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
     .collection h2:after {
       position: absolute;
       display: block;
@@ -1846,7 +1867,9 @@ header {
   .collection .collection-scroller {
     display: block;
     position: relative;
-    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 1430px;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch; }
     .collection .collection-scroller .collection-items {
