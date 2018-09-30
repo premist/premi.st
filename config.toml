@@ -28,5 +28,7 @@ DefaultContentLanguage = "en"
 
 
 [languages]
-  [languages.en.params]
-  [languages.ko.params]
+  [languages.en]
+    languageName = "English"
+  [languages.ko]
+    languageName = "한국어"

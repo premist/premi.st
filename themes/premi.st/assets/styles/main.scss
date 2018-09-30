@@ -4,7 +4,7 @@
 @import "./fonts/ibm-plex/ibm-plex";
 
 $body_width: 1300px;
-$body_padding: 20px 0;
+$body_padding: 20px;
 
 $body_font_size: 20px;
 
@@ -20,7 +20,8 @@ $font_mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menl
 
 %container {
   position: relative;
-  width: $body_width;
+  width: 100%;
+  max-width: $body_width;
   padding: $body_padding;
   margin: 0px auto;
 }
@@ -109,6 +110,24 @@ header {
   }
 }
 
+footer {
+  @extend %container;
+  @extend %no-link-border;
+
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin: 10px;
+
+    font-size: $body_font_size;
+    font-family: $font_display;
+    font-weight: 600;
+  }
+}
+
 section {
   margin-bottom: 80px;
 }
@@ -124,10 +143,12 @@ section {
 
 #hero {
   @extend %container;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   h2 {
     font-size: $hero_font_size;
+
     line-height: 1.8em;
     margin: 0;
   }
