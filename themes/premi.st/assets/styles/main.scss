@@ -3,26 +3,33 @@
 @import "./fonts/gilroy";
 @import "./fonts/ibm-plex/ibm-plex";
 
-$body_width: 1300px;
-$body_padding: 20px;
+$body-width: 1300px;
+$body-padding: 40px;
+$body-padding-mobile: 20px;
 
-$body_font_size: 20px;
+$body-font-size: 20px;
+$feature-font-size: 30px;
+$hero-font-size: 90px;
 
-$hero_font_size: 90px;
+$heading-color: #111;
+$content-color: #444;
+$highlight-color: #ff8a65;
 
-$heading_color: #111;
-$content_color: #444;
-$highlight_color: #ff8a65;
+$font-display: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-text: "IBM Plex Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-$font_display: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-$font_text: "IBM Plex Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-$font_mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$mq-1100: "only screen and (min-width: 701px) and (max-width: 1100px)";
+$mq-700: "only screen and (max-width: 700px)";
 
 %container {
   position: relative;
   width: 100%;
-  max-width: $body_width;
-  padding: $body_padding;
+  max-width: $body-width;
+
+  padding: $body-padding;
+  @media #{$mq-700} { padding: $body-padding-mobile; }
+
   margin: 0px auto;
 }
 
@@ -35,21 +42,43 @@ $font_mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menl
 %list-item {
   margin: 10px 30px 10px 0;
 
-  font-family: $font_display;
+  font-family: $font-display;
   font-size: 1.2em;
+}
+
+%hero-font-size {
+  font-size: $hero-font-size;
+  @media #{$mq-1100} { font-size: $hero-font-size * 0.9; }
+  @media #{$mq-700} { font-size: $hero-font-size * 0.6; }
+}
+
+%body-font-size {
+  font-size: $body-font-size;
+  @media #{$mq-1100} { font-size: $body-font-size * 1; }
+  @media #{$mq-700} { font-size: $body-font-size * 0.9; }
+}
+
+%feature-font-size {
+  font-size: $feature-font-size;
+  @media #{$mq-1100} { font-size: $feature-font-size * 0.8; }
+  @media #{$mq-700} { font-size: $feature-font-size * 0.7; }
 }
 
 @mixin bottom-stripes($height, $left, $bottom) {
     &:after {
       position: absolute;
       display: block;
+
       width: 110%;
+      @media #{$mq-1100} { width: 106%; }
+      @media #{$mq-700} { width: 103%; }
+
       height: $height;
       left: $left;
       bottom: $bottom;
       z-index: -1;
 
-      background-color: $highlight_color;
+      background-color: $highlight-color;
       content: "\00a0";
     }
 }
@@ -58,22 +87,24 @@ $font_mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menl
 
 body {
   width: 100%;
-  font-family: $font_text;
+
+  @extend %body-font-size;
+  font-family: $font-text;
   font-weight: 400;
-  font-size: $body_font_size;
   line-height: 1.5em;
-  color: $content_color;
+  color: $content-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font_display;
+  font-family: $font-display;
   font-feature-settings: "liga" 1;
 
   letter-spacing: 0em;
 }
 
 h2 {
-  color: $heading_color;
+  color: $heading-color;
+  margin: 0;
 }
 
 p {
@@ -81,16 +112,20 @@ p {
 }
 
 pre {
-  font-family: $font_mono;
+  width: 100%;
+  font-family: $font-mono;
+
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
-  color: $highlight_color;
+  color: $highlight-color;
   text-decoration: none;
-  border-bottom: 1px solid $highlight_color;
+  border-bottom: 1px solid $highlight-color;
 
   &:hover {
-    color: darken($highlight_color, 20%);
+    color: darken($highlight-color, 20%);
   }
 }
 
@@ -103,8 +138,8 @@ header {
   h1, p {
     margin: 0;
 
-    font-size: $body_font_size;
-    font-family: $font_display;
+    @extend %body-font-size;
+    font-family: $font-display;
     font-weight: 600;
     text-transform: lowercase;
   }
@@ -122,8 +157,8 @@ footer {
   p {
     margin: 10px;
 
-    font-size: $body_font_size;
-    font-family: $font_display;
+    @extend %body-font-size;
+    font-family: $font-display;
     font-weight: 600;
   }
 }
@@ -132,7 +167,7 @@ section {
   margin-bottom: 80px;
 }
 
-.container  { @extend %container; }
+.container { @extend %container; }
 
 .icon {
   display: inline-block;
@@ -146,11 +181,20 @@ section {
   padding-top: 100px;
   padding-bottom: 100px;
 
-  h2 {
-    font-size: $hero_font_size;
+  @media #{$mq-1100} {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media #{$mq-700} {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
-    line-height: 1.8em;
+  h2 {
     margin: 0;
+
+    @extend %hero-font-size;
+    line-height: 1.8em;
   }
 
   span {
@@ -158,12 +202,16 @@ section {
     display: inline-block;
 
     @include bottom-stripes(20%, 20px, 25px);
+    @media #{$mq-1100} { @include bottom-stripes(20%, 16px, 25px); }
+    @media #{$mq-700} { @include bottom-stripes(20%, 8px, 15px); }
   }
 }
 
 .content-wrap {
   @extend %container;
   display: flex;
+
+  @media #{$mq-700} { display: block; }
 
   h2, p { margin-top: 20px; }
 
@@ -180,7 +228,7 @@ section {
     }
 
     h2 {
-      font-size: $body_font_size * 4;
+      @extend %hero-font-size;
       line-height: 1em;
     }
   }
@@ -188,19 +236,29 @@ section {
   .content {
     flex: 8;
     padding-left: 40px;
-    font-size: $body_font_size * 1.5;
+
+    @media #{$mq-700} {
+      padding-left: 0;
+      br { display: none; } // disable arbitary line breaks
+    }
+
+    @extend %feature-font-size;
     line-height: 1.5em;
   }
 }
 
 #connect {
   @extend %no-link-border;
-  font-family: $font_display;
+  font-family: $font-display;
 
   ul {
     display: flex;
+    @media #{$mq-700} { display: block; }
+
     list-style: none;
-    padding: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
 
     justify-content: space-between;
   }
@@ -238,12 +296,16 @@ section {
     position: relative;
     margin: 0 auto;
     padding: 10px 0;
-    width: $body_width * 1.1;
+
+    max-width: $body-width * 1.1;
+    width: 100%;
+
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
 
     .collection-items {
       white-space: nowrap;
+      padding: 0 20px;
     }
 
     .collection-item {
@@ -260,8 +322,8 @@ section {
 
       img {
         height: 250px;
+        @media #{$mq-700} { height: 175px; }
       }
     }
   }
 }
-

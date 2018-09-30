@@ -1737,8 +1737,11 @@ header, footer, .container, #hero, .content-wrap {
   position: relative;
   width: 100%;
   max-width: 1300px;
-  padding: 20px;
+  padding: 40px;
   margin: 0px auto; }
+  @media only screen and (max-width: 700px) {
+    header, footer, .container, #hero, .content-wrap {
+      padding: 20px; } }
 
 footer a, #connect a, #contact a, .collection .collection-scroller .collection-item a {
   border-bottom: none; }
@@ -1748,6 +1751,33 @@ footer a, #connect a, #contact a, .collection .collection-scroller .collection-i
   font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1.2em; }
 
+#hero h2, .content-wrap .title h2 {
+  font-size: 90px; }
+  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+    #hero h2, .content-wrap .title h2 {
+      font-size: 81px; } }
+  @media only screen and (max-width: 700px) {
+    #hero h2, .content-wrap .title h2 {
+      font-size: 54px; } }
+
+body, header h1, header p, footer p {
+  font-size: 20px; }
+  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+    body, header h1, header p, footer p {
+      font-size: 20px; } }
+  @media only screen and (max-width: 700px) {
+    body, header h1, header p, footer p {
+      font-size: 18px; } }
+
+.content-wrap .content {
+  font-size: 30px; }
+  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+    .content-wrap .content {
+      font-size: 24px; } }
+  @media only screen and (max-width: 700px) {
+    .content-wrap .content {
+      font-size: 21px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -1755,7 +1785,6 @@ body {
   width: 100%;
   font-family: "IBM Plex Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 20px;
   line-height: 1.5em;
   color: #444; }
 
@@ -1765,13 +1794,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0em; }
 
 h2 {
-  color: #111; }
+  color: #111;
+  margin: 0; }
 
 p {
   margin-bottom: 1.5em; }
 
 pre {
-  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+  width: 100%;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 a {
   color: #ff8a65;
@@ -1785,7 +1818,6 @@ header {
   justify-content: space-between; }
   header h1, header p {
     margin: 0;
-    font-size: 20px;
     font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 600;
     text-transform: lowercase; }
@@ -1796,7 +1828,6 @@ footer {
   justify-content: center; }
   footer p {
     margin: 10px;
-    font-size: 20px;
     font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 600; }
 
@@ -1812,10 +1843,17 @@ section {
 #hero {
   padding-top: 100px;
   padding-bottom: 100px; }
+  @media only screen and (min-width: 701px) and (max-width: 1100px) {
+    #hero {
+      padding-top: 70px;
+      padding-bottom: 70px; } }
+  @media only screen and (max-width: 700px) {
+    #hero {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
   #hero h2 {
-    font-size: 90px;
-    line-height: 1.8em;
-    margin: 0; }
+    margin: 0;
+    line-height: 1.8em; }
   #hero span {
     position: relative;
     display: inline-block; }
@@ -1829,9 +1867,52 @@ section {
       z-index: -1;
       background-color: #ff8a65;
       content: "\00a0"; }
+      @media only screen and (min-width: 701px) and (max-width: 1100px) {
+        #hero span:after {
+          width: 106%; } }
+      @media only screen and (max-width: 700px) {
+        #hero span:after {
+          width: 103%; } }
+    @media only screen and (min-width: 701px) and (max-width: 1100px) {
+      #hero span:after {
+        position: absolute;
+        display: block;
+        width: 110%;
+        height: 20%;
+        left: 16px;
+        bottom: 25px;
+        z-index: -1;
+        background-color: #ff8a65;
+        content: "\00a0"; } }
+  @media only screen and (min-width: 701px) and (max-width: 1100px) and (min-width: 701px) and (max-width: 1100px) {
+    #hero span:after {
+      width: 106%; } }
+  @media only screen and (min-width: 701px) and (max-width: 1100px) and (max-width: 700px) {
+    #hero span:after {
+      width: 103%; } }
+    @media only screen and (max-width: 700px) {
+      #hero span:after {
+        position: absolute;
+        display: block;
+        width: 110%;
+        height: 20%;
+        left: 8px;
+        bottom: 15px;
+        z-index: -1;
+        background-color: #ff8a65;
+        content: "\00a0"; } }
+  @media only screen and (max-width: 700px) and (min-width: 701px) and (max-width: 1100px) {
+    #hero span:after {
+      width: 106%; } }
+  @media only screen and (max-width: 700px) and (max-width: 700px) {
+    #hero span:after {
+      width: 103%; } }
 
 .content-wrap {
   display: flex; }
+  @media only screen and (max-width: 700px) {
+    .content-wrap {
+      display: block; } }
   .content-wrap h2, .content-wrap p {
     margin-top: 20px; }
   .content-wrap > div {
@@ -1842,21 +1923,28 @@ section {
       width: 100%;
       margin-top: 20px; }
     .content-wrap .title h2 {
-      font-size: 80px;
       line-height: 1em; }
   .content-wrap .content {
     flex: 8;
     padding-left: 40px;
-    font-size: 30px;
     line-height: 1.5em; }
+    @media only screen and (max-width: 700px) {
+      .content-wrap .content {
+        padding-left: 0; }
+        .content-wrap .content br {
+          display: none; } }
 
 #connect {
   font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   #connect ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     justify-content: space-between; }
+    @media only screen and (max-width: 700px) {
+      #connect ul {
+        display: block; } }
   #connect span {
     display: inline-block; }
 
@@ -1876,16 +1964,24 @@ section {
       z-index: -1;
       background-color: #ff8a65;
       content: "\00a0"; }
+      @media only screen and (min-width: 701px) and (max-width: 1100px) {
+        .collection h2:after {
+          width: 106%; } }
+      @media only screen and (max-width: 700px) {
+        .collection h2:after {
+          width: 103%; } }
   .collection .collection-scroller {
     display: block;
     position: relative;
     margin: 0 auto;
     padding: 10px 0;
-    width: 1430px;
+    max-width: 1430px;
+    width: 100%;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch; }
     .collection .collection-scroller .collection-items {
-      white-space: nowrap; }
+      white-space: nowrap;
+      padding: 0 20px; }
     .collection .collection-scroller .collection-item {
       position: relative;
       display: inline-block;
@@ -1895,3 +1991,6 @@ section {
         margin: 0; }
       .collection .collection-scroller .collection-item img {
         height: 250px; }
+        @media only screen and (max-width: 700px) {
+          .collection .collection-scroller .collection-item img {
+            height: 175px; } }

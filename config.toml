@@ -24,7 +24,8 @@ DefaultContentLanguage = "en"
 
   hero1 = "I design,"
   hero2 = "develop,"
-  hero3 = "and operate things."
+  hero3_1 = "and operate"
+  hero3_2 = "things."
 
 
 [languages]
