@@ -1758,7 +1758,10 @@ footer a, #connect a, #contact a, .collection .collection-scroller .collection-i
       font-size: 72px; } }
   @media (max-width: 750px) {
     #hero h2, .content-wrap .title h2 {
-      font-size: 54px; } }
+      font-size: 72px; } }
+  @media (max-width: 500px) {
+    #hero h2, .content-wrap .title h2 {
+      font-size: 45px; } }
 
 body, header h1, header p, footer p {
   font-size: 20px; }
@@ -1768,6 +1771,9 @@ body, header h1, header p, footer p {
   @media (max-width: 750px) {
     body, header h1, header p, footer p {
       font-size: 18px; } }
+  @media (max-width: 500px) {
+    body, header h1, header p, footer p {
+      font-size: 16px; } }
 
 .content-wrap .content {
   font-size: 30px; }
@@ -1777,6 +1783,9 @@ body, header h1, header p, footer p {
   @media (max-width: 750px) {
     .content-wrap .content {
       font-size: 21px; } }
+  @media (max-width: 500px) {
+    .content-wrap .content {
+      font-size: 18px; } }
 
 * {
   box-sizing: border-box; }
@@ -1867,57 +1876,47 @@ section {
         #hero span.r3:after {
           position: absolute;
           display: block;
-          width: 110%;
+          width: calc(100% + 20px);
           height: 20%;
           left: 20px;
           bottom: 25px;
           z-index: -1;
           background-color: #ff8a65;
-          content: "\00a0"; } }
-    @media (min-width: 1101px) and (min-width: 751px) and (max-width: 1100px) {
-      #hero span.r3:after {
-        width: 106%; } }
-    @media (min-width: 1101px) and (max-width: 750px) {
-      #hero span.r3:after {
-        width: 106%; } }
+          content: "\00a0"; }
+      #hero span.r4 {
+        margin-right: 0.25em; }
+      #hero span.r4:last-child, #hero span.r3.r4 {
+        margin-right: 0; } }
     @media (min-width: 751px) and (max-width: 1100px) {
       #hero span.r3 {
         display: table; }
         #hero span.r3:after {
           position: absolute;
           display: block;
-          width: 110%;
+          width: calc(100% + 16px);
           height: 20%;
           left: 16px;
           bottom: 25px;
           z-index: -1;
           background-color: #ff8a65;
-          content: "\00a0"; } }
-    @media (min-width: 751px) and (max-width: 1100px) and (min-width: 751px) and (max-width: 1100px) {
-      #hero span.r3:after {
-        width: 106%; } }
-    @media (min-width: 751px) and (max-width: 1100px) and (max-width: 750px) {
-      #hero span.r3:after {
-        width: 106%; } }
+          content: "\00a0"; }
+      #hero span.r4 {
+        margin-right: 0.25em; }
+      #hero span.r4:last-child, #hero span.r3.r4 {
+        margin-right: 0; } }
     @media (max-width: 750px) {
       #hero span.r4 {
         display: table; }
         #hero span.r4:after {
           position: absolute;
           display: block;
-          width: 110%;
+          width: calc(100% + 8px);
           height: 20%;
           left: 8px;
           bottom: 15px;
           z-index: -1;
           background-color: #ff8a65;
           content: "\00a0"; } }
-    @media (max-width: 750px) and (min-width: 751px) and (max-width: 1100px) {
-      #hero span.r4:after {
-        width: 106%; } }
-    @media (max-width: 750px) and (max-width: 750px) {
-      #hero span.r4:after {
-        width: 106%; } }
 
 .content-wrap {
   display: flex; }
@@ -1955,7 +1954,13 @@ section {
     justify-content: space-between; }
     @media (max-width: 750px) {
       #connect ul {
-        display: block; } }
+        display: block;
+        overflow: hidden; } }
+  @media (max-width: 750px) {
+    #connect li {
+      width: 50%;
+      margin: 0 0 10px;
+      float: left; } }
   #connect span {
     display: inline-block; }
 
@@ -1968,19 +1973,13 @@ section {
     .collection h2:after {
       position: absolute;
       display: block;
-      width: 110%;
+      width: calc(100% + 6px);
       height: 40%;
       left: 6px;
       bottom: 0px;
       z-index: -1;
       background-color: #ff8a65;
       content: "\00a0"; }
-      @media (min-width: 751px) and (max-width: 1100px) {
-        .collection h2:after {
-          width: 106%; } }
-      @media (max-width: 750px) {
-        .collection h2:after {
-          width: 106%; } }
   .collection .collection-scroller {
     display: block;
     position: relative;

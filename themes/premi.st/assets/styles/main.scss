@@ -51,19 +51,22 @@ $mq-supersmall: "(max-width: 500px)";
 %hero-font-size {
   font-size: $hero-font-size;
   @media #{$mq-1100} { font-size: $hero-font-size * 0.8; }
-  @media #{$mq-750} { font-size: $hero-font-size * 0.6; }
+  @media #{$mq-750} { font-size: $hero-font-size * 0.8; }
+  @media #{$mq-supersmall} { font-size: $hero-font-size * 0.5; }
 }
 
 %body-font-size {
   font-size: $body-font-size;
   @media #{$mq-1100} { font-size: $body-font-size * 1; }
   @media #{$mq-750} { font-size: $body-font-size * 0.9; }
+  @media #{$mq-supersmall} { font-size: $body-font-size * 0.8; }
 }
 
 %feature-font-size {
   font-size: $feature-font-size;
   @media #{$mq-1100} { font-size: $feature-font-size * 0.8; }
   @media #{$mq-750} { font-size: $feature-font-size * 0.7; }
+  @media #{$mq-supersmall} { font-size: $feature-font-size * 0.6; }
 }
 
 @mixin bottom-stripes($height, $left, $bottom) {
@@ -71,10 +74,7 @@ $mq-supersmall: "(max-width: 500px)";
       position: absolute;
       display: block;
 
-      width: 110%;
-      @media #{$mq-1100} { width: 106%; }
-      @media #{$mq-750} { width: 106%; }
-
+      width: calc(100% + #{$left});
       height: $height;
       left: $left;
       bottom: $bottom;
@@ -210,12 +210,16 @@ section {
         display: table;
         @include bottom-stripes(20%, 20px, 25px);
       }
+      &.r4 { margin-right: 0.25em; }
+      &.r4:last-child, &.r3.r4 { margin-right: 0; }
     }
     @media #{$mq-1100} {
       &.r3 {
         display: table;
         @include bottom-stripes(20%, 16px, 25px);
       }
+      &.r4 { margin-right: 0.25em; }
+      &.r4:last-child, &.r3.r4 { margin-right: 0; }
     }
     @media #{$mq-750} {
       &.r4 {
@@ -272,7 +276,11 @@ section {
 
   ul {
     display: flex;
-    @media #{$mq-750} { display: block; }
+
+    @media #{$mq-750} {
+      display: block;
+      overflow: hidden;
+    }
 
     list-style: none;
 
@@ -284,6 +292,12 @@ section {
 
   li {
     @extend %list-item;
+
+    @media #{$mq-750} {
+      width: 50%;
+      margin: 0 0 10px;
+      float: left;
+    }
   }
 
   span {
