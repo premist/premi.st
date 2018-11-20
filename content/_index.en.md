@@ -4,7 +4,7 @@ into the next level at [Shakr](https://www.shakr.com/).
 I try to think in design mindset instead of letting<br>
 technical limitations dictate user experience.<br>
 
-My primary programmaing language of choice is Ruby,<br>
+My primary programming language of choice is Ruby,<br>
 but I also write in other languages —<br>
 Elixir, Swift, TypeScript, and more.
 
