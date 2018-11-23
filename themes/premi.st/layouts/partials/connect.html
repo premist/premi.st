@@ -43,7 +43,7 @@
     {{ end }}
 
     {{ with .Site.Params.github }}
-      {{ $link := printf "https://gtihub.com/%s" . }}
+      {{ $link := printf "https://github.com/%s" . }}
       {{ $github := slice "GitHub" "gh.svg" . $link }}
       {{ template "social_item" $github }}
     {{ end }}
