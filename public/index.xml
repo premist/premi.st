@@ -1,14 +1,137 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>premi.st</title>
+    <link>https://premi.st/</link>
+    <description>Recent content on premi.st</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://premi.st/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>35.premi.st</title>
+      <link>https://premi.st/projects/35.premi.st/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/projects/35.premi.st/</guid>
+      <description>I tend to switch my gears quite often, but camera is especially the one I used to consistently sell and buy the new one.</description>
+    </item>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2016 Google Cloud Korea Event</title>
+      <link>https://premi.st/talks/2016-google-cloud-korea-event/</link>
+      <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/2016-google-cloud-korea-event/</guid>
+      <description>Hi</description>
+    </item>
     
+    <item>
+      <title>mirror.premi.st</title>
+      <link>https://premi.st/projects/mirror.premi.st/</link>
+      <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/projects/mirror.premi.st/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>si.mpli.st</title>
+      <link>https://premi.st/projects/si.mpli.st/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/projects/si.mpli.st/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>followmyfootprint</title>
+      <link>https://premi.st/projects/followmyfootprint/</link>
+      <pubDate>Fri, 25 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/projects/followmyfootprint/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>RE:MU</title>
+      <link>https://premi.st/projects/remu/</link>
+      <pubDate>Sun, 18 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/projects/remu/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>oneonezerozero</title>
+      <link>https://premi.st/projects/oneonezerozero/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/projects/oneonezerozero/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>Google Cloud Summit 2018 Seoul</title>
+      <link>https://premi.st/talks/google-cloud-summit-2018-seoul/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/google-cloud-summit-2018-seoul/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>OpenInfra Days Korea 2018</title>
+      <link>https://premi.st/talks/openinfra-days-korea-2018/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/openinfra-days-korea-2018/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>with GCP 2017</title>
+      <link>https://premi.st/talks/with-gcp-2017/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/with-gcp-2017/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>2017 Google Cloud Korea Event</title>
+      <link>https://premi.st/talks/2017-google-cloud-korea-event/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/2017-google-cloud-korea-event/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>2015 AWS Summit Seoul</title>
+      <link>https://premi.st/talks/2015-aws-summit-seoul/</link>
+      <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/2015-aws-summit-seoul/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>2012 Startup Asia Singapore</title>
+      <link>https://premi.st/talks/2012-startup-asia-singapore/</link>
+      <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/2012-startup-asia-singapore/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>2011 Youth Venture Summit</title>
+      <link>https://premi.st/talks/2011-youth-venture-summit/</link>
+      <pubDate>Tue, 29 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://premi.st/talks/2011-youth-venture-summit/</guid>
+      <description>Hi</description>
+    </item>
     
   </channel>
 </rss>

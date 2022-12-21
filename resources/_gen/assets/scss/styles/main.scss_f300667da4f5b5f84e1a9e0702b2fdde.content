@@ -1733,48 +1733,45 @@ template {
   src: local("IBM Plex Sans Thin Italic"), local("IBMPlexSans-ThinItalic"), url("https://cdn.si.mpli.st/webfonts/ibmplex/IBM-Plex-Sans/fonts/split/woff2/IBMPlexSans-ThinItalic-Greek.woff2") format("woff2");
   unicode-range: U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE; }
 
-header, footer, .container, #hero, .content-wrap {
+.content-wrap, #hero, .container, footer, header {
   position: relative;
   width: 100%;
   max-width: 1300px;
   padding: 40px;
   margin: 0px auto; }
   @media (max-width: 750px) {
-    header, footer, .container, #hero, .content-wrap {
+    .content-wrap, #hero, .container, footer, header {
       padding: 20px; } }
-
-footer a, #connect a, #contact a, .collection .collection-scroller .collection-item a {
+.collection .collection-scroller .collection-item a, #contact a, #connect a, footer a {
   border-bottom: none; }
 
-#connect li, #contact span {
+#contact span, #connect li {
   margin: 10px 30px 10px 0;
   font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1.2em; }
 
-#hero h2, .content-wrap .title h2 {
+.content-wrap .title h2, #hero h2 {
   font-size: 90px; }
   @media (min-width: 751px) and (max-width: 1100px) {
-    #hero h2, .content-wrap .title h2 {
+    .content-wrap .title h2, #hero h2 {
       font-size: 72px; } }
   @media (max-width: 750px) {
-    #hero h2, .content-wrap .title h2 {
+    .content-wrap .title h2, #hero h2 {
       font-size: 72px; } }
   @media (max-width: 500px) {
-    #hero h2, .content-wrap .title h2 {
+    .content-wrap .title h2, #hero h2 {
       font-size: 45px; } }
-
-body, header h1, header p, footer p {
+footer p, header h1, header p, body {
   font-size: 20px; }
   @media (min-width: 751px) and (max-width: 1100px) {
-    body, header h1, header p, footer p {
+    footer p, header h1, header p, body {
       font-size: 20px; } }
   @media (max-width: 750px) {
-    body, header h1, header p, footer p {
+    footer p, header h1, header p, body {
       font-size: 18px; } }
   @media (max-width: 500px) {
-    body, header h1, header p, footer p {
+    footer p, header h1, header p, body {
       font-size: 16px; } }
-
 .content-wrap .content {
   font-size: 30px; }
   @media (min-width: 751px) and (max-width: 1100px) {
@@ -1786,7 +1783,6 @@ body, header h1, header p, footer p {
   @media (max-width: 500px) {
     .content-wrap .content {
       font-size: 18px; } }
-
 * {
   box-sizing: border-box; }
 
@@ -1917,7 +1913,6 @@ section {
           z-index: -1;
           background-color: #ff8a65;
           content: "\00a0"; } }
-
 .content-wrap {
   display: flex; }
   @media (max-width: 750px) {
@@ -1943,7 +1938,6 @@ section {
         padding-left: 0; }
         .content-wrap .content br {
           display: none; } }
-
 #connect {
   font-family: "Gilroy", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   #connect ul {
